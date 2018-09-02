@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :portfolios, except: [:show]
+  get 'angular-items', to: 'portfolios#angular'
   resources :blogs do
     member do
       get :toggle_status
